@@ -1,0 +1,83 @@
+/*
+
+   FONT FAMILY GROUPS
+   Docs: http://tachyons.io/docs/typography/font-family/
+
+*/
+
+/*@font-face {
+    font-family: "Manifold";
+    font-weight: 300;
+    src: url('../fonts/ManifoldDSA-Light.woff2') format('woff2'),
+         url('../fonts/ManifoldDSA-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Manifold";
+    font-weight: 300;
+    src: url('../fonts/ManifoldDSA-LightItalic.woff2') format('woff2'),
+         url('../fonts/ManifoldDSA-LightItalic.woff') format('woff');
+    font-style: italic;
+}*/
+
+@font-face {
+    font-family: "Manifold";
+    font-weight: 400;
+    src: url('../fonts/ManifoldDSA-Medium.woff2') format('woff2'),
+         url('../fonts/ManifoldDSA-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Manifold";
+    font-weight: 400;
+    src: url('../fonts/ManifoldDSA-MediumItalic.woff2') format('woff2'),
+         url('../fonts/ManifoldDSA-MediumItalic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Manifold";
+    font-weight: 600;
+    src: url('../fonts/ManifoldDSA-Bold.woff2') format('woff2'),
+         url('../fonts/ManifoldDSA-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Manifold";
+    font-weight: 600;
+    src: url('../fonts/ManifoldDSA-BoldItalic.woff2') format('woff2'),
+         url('../fonts/ManifoldDSA-BoldItalic.woff') format('woff');
+    font-style: italic;
+}
+
+.manifold {
+    font-family: "Manifold";
+}
+
+.sans-serif {
+  font-family: "Manifold",
+               -apple-system,
+               BlinkMacSystemFont,
+               'helvetica neue',
+               helvetica,
+               roboto,
+               noto,
+               arial,
+               sans-serif;
+}
+
+
+/* Monospaced Typefaces (for code) */
+
+/* From http://cssfontstack.com */
+code, .code {
+  font-family: Consolas,
+               monaco,
+               monospace;
+}
+
+.courier {
+  font-family: 'Courier Next',
+               courier,
+               monospace;
+}

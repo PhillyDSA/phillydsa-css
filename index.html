@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+       Philly DSA Style Guide
+    </title>
+    <meta name="description" content="Documentation for the Tachyons color palette along with a comprehensive list of accessible combinations.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="@mrmrs">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="tachyons/css/tachyons.min.css">
+  </head>
+  <body class="w-100 sans-serif">
+    <div class="ph3 ph5-ns pt4 pb5">
+      <div class="ph3 ph5-ns pt4 pb5">
+        <h2 class="f3 mb4 pb2 bb">Fonts</h2>
+        <h3 class="f5 fw6 sans-serif pt4">Default Sans Serif (Manifold)</h3>
+        <code class="f6 db">&lt;p class="sans-serif"&gt;text&lt;/p&gt;</code>
+        <p class="sans-serif lh-copy measure">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <h3 class="f5 fw6 sans-serif pt4">Default Sans Serif Italic (Manifold)</h3>
+        <code class="f6 db">&lt;p class="sans-serif i"&gt;text&lt;/p&gt;</code>
+        <code class="f6 db">&lt;p class="sans-serif"&gt;&lt;em&gt;text&lt;/em&gt;&lt;/p&gt;</code>
+        <p class="sans-serif lh-copy measure">
+          <em>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</em>
+        </p>
+        <h3 class="f5 fw6 sans-serif pt4">Default Sans Serif Bold (Manifold)</h3>
+        <code class="f6 db">&lt;p class="sans-serif b"&gt;text&lt;/p&gt;</code>
+        <code class="f6 db">&lt;p class="sans-serif"&gt;&lt;strong&gt;text&lt;/strong&gt;&lt;/p&gt;</code>
+        <p class="sans-serif lh-copy measure">
+          <strong>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</strong>
+        </p>
+      </div>
+
+      <!-- FONT WEIGHTS -->
+      <div class="ph3 ph5-ns pt4 pb5">
+        <h3 class="f5 mb4 pb2 bb">Examples</h3>
+        <h3 class="f5 fw6 pt4">String Values</h3>
+        <code class="f6 db">
+          &lt;p class="normal"&gt;Font-weight: normal&lt;/p&gt;
+        </code>
+        <p class="f4 f3-ns normal pl3 pl4-ns bl bw2 b--black-10 mb5">Font-weight: normal</p>
+        <code class="f6 db">
+          &lt;p class="b"&gt;Font-weight: bold&lt;/p&gt;
+        </code>
+        <p class="f4 f3-ns b pl3 pl4-ns bl bw2 b--black-10 mb5">Font-weight: bold</p>
+        <h3 class="f5 fw6 mt4">Number values</h3>
+        <code class="f6 db">
+          &lt;p class="fw4"&gt;Font-weight: 400&lt;/p&gt;
+        </code>
+        <p class="f4 f3-ns fw4 pl3 pl4-ns bl bw2 b--black-10 mb5">Font-weight: 400</p>
+        <code class="f6 db">
+          &lt;p class="fw6"&gt;Font-weight: 600&lt;/p&gt;
+        </code>
+        <p class="f4 f3-ns fw6 pl3 pl4-ns bl bw2 b--black-10 mb5">Font-weight: 600</p>
+      </div>
+
+      <!-- COLORS -->
+      <div class="ph3 ph5-ns pt4 pb5">
+        <h2 class="f3 mb4 pb2 bb">Color Palette</h2>
+        <ul class="list pl0 ml0 cf">
+          <li class="fl w-100 w-50-m w-25-l mb1">
+            <div style="background-color:#231F20" class="ba bw1 b--black fl w-40 pv4"></div>
+              <div class="fl w-60 lh-copy pl2 pt2">
+                <b class="db"> black </b>
+                <code class="f6">#231F20</code>
+              </div>
+          </li>
+          <li class="fl w-100 w-50-m w-25-l mb1">
+            <div style="background-color:#EC1F27" class="ba bw1 b--black fl w-40 pv4"></div>
+              <div class="fl w-60 lh-copy pl2 pt2">
+                <b class="db"> red </b>
+                <code class="f6">#EC1F27</code>
+              </div>
+          </li>
+          <li class="fl w-100 w-50-m w-25-l mb1">
+            <div style="background-color:#fff" class="ba bw1 b--black fl w-40 pv4"></div>
+              <div class="fl w-60 lh-copy pl2 pt2">
+                <b class="db"> white </b>
+                <code class="f6">#fff</code>
+              </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- LINKS -->
+      <div class="ph3 ph5-ns pt4 pb5">
+        <h2 class="f3 mb4 pb2 bb">Links</h2>
+        <p class="measure-wide">
+        Links should be in red and bolded, because the default color (above) does not pass accessibility criteria.
+        </p>
+        <div class="ml4">
+            <code class="f6 db pt2">
+              &lt;p&gt;Here's a &lt;a href="#" class="link"&gt;link&lt;/a&gt;&lt;/p&gt;
+            </code>
+            <p class="normal mb2">Here's a <a href="#" class="link">link</a></p>
+        <p class="measure-wide mt4">
+        As this should be the default, you don't need to add the <code>link</code> class to an &lt;a&gt; tag for this to work:</p>
+        <code class="f6 db pt2">
+          &lt;p&gt;Here's a &lt;a href="#"&gt;link&lt;/a&gt;&lt;/p&gt;
+        </code>
+        <p class="normal mb2">Here's a <a href="#">link</a></p>
+      </div>
+    </div>
+  </body>
+</html>
