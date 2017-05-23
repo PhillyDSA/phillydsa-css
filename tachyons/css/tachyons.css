@@ -358,9 +358,101 @@ img { max-width: 100%; }
 .bb { border-bottom-style: solid; border-bottom-width: 1px; }
 .bl { border-left-style: solid; border-left-width: 1px; }
 .bn { border-style: none; border-width: 0; }
-/*@import './_border-colors';*/
-/*@import './_border-radius';*/
-/*@import './_border-style';*/
+/*
+
+   BORDER COLORS
+   Docs: http://tachyons.io/docs/themes/borders/
+
+   Border colors can be used to extend the base
+   border classes ba,bt,bb,br,bl found in the _borders.css file.
+
+   The base border class by default will set the color of the border
+   to that of the current text color. These classes are for the cases
+   where you desire for the text and border colors to be different.
+
+   Base:
+     b = border
+
+   Modifiers:
+   --color-name = each color variable name is also a border color name
+
+*/
+.b--black { border-color: #000; }
+.b--near-black { border-color: #111; }
+.b--dark-gray { border-color: #333; }
+.b--mid-gray { border-color: #555; }
+.b--gray { border-color: #777; }
+.b--silver { border-color: #999; }
+.b--light-silver { border-color: #aaa; }
+.b--moon-gray { border-color: #ccc; }
+.b--light-gray { border-color: #eee; }
+.b--near-white { border-color: #f4f4f4; }
+.b--white { border-color: #fff; }
+.b--red { border-color: #ec1f27; }
+.b--transparent { border-color: transparent; }
+.b--inherit { border-color: inherit; }
+/*
+
+   BORDER RADIUS
+   Docs: http://tachyons.io/docs/themes/border-radius/
+
+   Base:
+     br   = border-radius
+
+   Modifiers:
+     0    = 0/none
+     1    = 1st step in scale
+     2    = 2nd step in scale
+     3    = 3rd step in scale
+     4    = 4th step in scale
+
+   Literal values:
+     -100 = 100%
+     -pill = 9999px
+
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+
+*/
+.br0 { border-radius: 0; }
+.br1 { border-radius: .125rem; }
+.br2 { border-radius: .25rem; }
+.br3 { border-radius: .5rem; }
+.br4 { border-radius: 1rem; }
+.br-100 { border-radius: 100%; }
+.br-pill { border-radius: 9999px; }
+.br--bottom { border-top-left-radius: 0; border-top-right-radius: 0; }
+.br--top { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.br--right { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.br--left { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+/*
+
+   BORDER STYLES
+   Docs: http://tachyons.io/docs/themes/borders/
+
+   Depends on base border module in _borders.css
+
+   Base:
+     b = border-style
+
+   Modifiers:
+     --none   = none
+     --dotted = dotted
+     --dashed = dashed
+     --solid  = solid
+
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+
+ */
+.b--dotted { border-style: dotted; }
+.b--dashed { border-style: dashed; }
+.b--solid { border-style: solid; }
+.b--none { border-style: none; }
 /*
 
    BORDER WIDTHS
@@ -773,11 +865,11 @@ code, .code { font-family: Consolas, monaco, monospace; }
    Docs: http://tachyons.io/docs/elements/links/
 
 */
-.link { text-decoration: none; -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
-.link:link, .link:visited { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
-.link:hover { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
-.link:active { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
-.link:focus { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; outline: 1px dotted currentColor; }
+.link { text-decoration: none; transition: color .15s ease-in; }
+.link:link, .link:visited { transition: color .15s ease-in; }
+.link:hover { transition: color .15s ease-in; }
+.link:active { transition: color .15s ease-in; }
+.link:focus { transition: color .15s ease-in; outline: 1px dotted currentColor; }
 /*
 
    LISTS
@@ -1468,16 +1560,16 @@ code, .code { font-family: Consolas, monaco, monospace; }
   Dim element on hover by adding the dim class.
 
 */
-.dim { opacity: 1; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
-.dim:hover, .dim:focus { opacity: .5; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
-.dim:active { opacity: .8; -webkit-transition: opacity .15s ease-out; transition: opacity .15s ease-out; }
+.dim { opacity: 1; transition: opacity .15s ease-in; }
+.dim:hover, .dim:focus { opacity: .5; transition: opacity .15s ease-in; }
+.dim:active { opacity: .8; transition: opacity .15s ease-out; }
 /*
 
   Animate opacity to 100% on hover by adding the glow class.
 
 */
-.glow { -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
-.glow:hover, .glow:focus { opacity: 1; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
+.glow { transition: opacity .15s ease-in; }
+.glow:hover, .glow:focus { opacity: 1; transition: opacity .15s ease-in; }
 /*
 
   Hide child & reveal on hover:
@@ -1492,15 +1584,15 @@ code, .code { font-family: Consolas, monaco, monospace; }
     <div class="child"> Hidden until hover or focus </div>
   </div>
 */
-.hide-child .child { opacity: 0; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
-.hide-child:hover  .child, .hide-child:focus  .child, .hide-child:active .child { opacity: 1; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
+.hide-child .child { opacity: 0; transition: opacity .15s ease-in; }
+.hide-child:hover  .child, .hide-child:focus  .child, .hide-child:active .child { opacity: 1; transition: opacity .15s ease-in; }
 .underline-hover:hover, .underline-hover:focus { text-decoration: underline; }
 /* Can combine this with overflow-hidden to make background images grow on hover
  * even if you are using background-size: cover */
-.grow { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); -webkit-transition: -webkit-transform .25s ease-out; transition: -webkit-transform .25s ease-out; transition: transform .25s ease-out; transition: transform .25s ease-out, -webkit-transform .25s ease-out; }
+.grow { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); transition: -webkit-transform .25s ease-out; transition: transform .25s ease-out; transition: transform .25s ease-out, -webkit-transform .25s ease-out; }
 .grow:hover, .grow:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
 .grow:active { -webkit-transform: scale( .90 ); transform: scale( .90 ); }
-.grow-large { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); -webkit-transition: -webkit-transform .25s ease-in-out; transition: -webkit-transform .25s ease-in-out; transition: transform .25s ease-in-out; transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
+.grow-large { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); transition: -webkit-transform .25s ease-in-out; transition: transform .25s ease-in-out; transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
 .grow-large:hover, .grow-large:focus { -webkit-transform: scale( 1.2 ); transform: scale( 1.2 ); }
 .grow-large:active { -webkit-transform: scale( .95 ); transform: scale( .95 ); }
 /* Add pointer on hover */
@@ -1511,12 +1603,12 @@ code, .code { font-family: Consolas, monaco, monospace; }
    Performant box-shadow animation pattern from 
    http://tobiasahlin.com/blog/how-to-animate-box-shadow/ 
 */
-.shadow-hover { cursor: pointer; position: relative; -webkit-transition: all .5s cubic-bezier( .165, .84, .44, 1 ); transition: all .5s cubic-bezier( .165, .84, .44, 1 ); }
-.shadow-hover::after { content: ''; box-shadow: 0 0 16px 2px rgba( 0, 0, 0, .2 ); opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; -webkit-transition: opacity .5s cubic-bezier( .165, .84, .44, 1 ); transition: opacity .5s cubic-bezier( .165, .84, .44, 1 ); }
+.shadow-hover { cursor: pointer; position: relative; transition: all .5s cubic-bezier( .165, .84, .44, 1 ); }
+.shadow-hover::after { content: ''; box-shadow: 0 0 16px 2px rgba( 0, 0, 0, .2 ); opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; transition: opacity .5s cubic-bezier( .165, .84, .44, 1 ); }
 .shadow-hover:hover::after, .shadow-hover:focus::after { opacity: 1; }
 /* Combine with classes in skins and skins-pseudo for 
  * many different transition possibilities. */
-.bg-animate, .bg-animate:hover, .bg-animate:focus { -webkit-transition: background-color .15s ease-in-out; transition: background-color .15s ease-in-out; }
+.bg-animate, .bg-animate:hover, .bg-animate:focus { transition: background-color .15s ease-in-out; }
 /*
 
   Z-INDEX
@@ -1563,7 +1655,22 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .z-inherit { z-index: inherit; }
 .z-initial { z-index: initial; }
 .z-unset { z-index: unset; }
-/*@import './_nested';*/
+/*
+
+    NESTED
+    Tachyons module for styling nested elements
+    that are generated by a cms.
+
+*/
+.nested-copy-line-height p, .nested-copy-line-height ul,
+.nested-copy-line-height ol { line-height: 1.5; }
+.nested-headline-line-height h1, .nested-headline-line-height h2,
+.nested-headline-line-height h3, .nested-headline-line-height h4,
+.nested-headline-line-height h5, .nested-headline-line-height h6 { line-height: 1.25; }
+.nested-list-reset ul, .nested-list-reset ol { padding-left: 0; margin-left: 0; list-style-type: none; }
+.nested-copy-indent p+p { text-indent: 1em; margin-top: 0; margin-bottom: 0; }
+.nested-copy-seperator p+p { margin-top: 1.5em; }
+.nested-img img { width: 100%; max-width: 100%; display: block; }
 /*
 
   STYLES
@@ -1653,6 +1760,21 @@ body { margin: 0; }
  .bb-ns { border-bottom-style: solid; border-bottom-width: 1px; }
  .bl-ns { border-left-style: solid; border-left-width: 1px; }
  .bn-ns { border-style: none; border-width: 0; }
+ .br0-ns { border-radius: 0; }
+ .br1-ns { border-radius: .125rem; }
+ .br2-ns { border-radius: .25rem; }
+ .br3-ns { border-radius: .5rem; }
+ .br4-ns { border-radius: 1rem; }
+ .br-100-ns { border-radius: 100%; }
+ .br-pill-ns { border-radius: 9999px; }
+ .br--bottom-ns { border-top-left-radius: 0; border-top-right-radius: 0; }
+ .br--top-ns { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+ .br--right-ns { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+ .br--left-ns { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+ .b--dotted-ns { border-style: dotted; }
+ .b--dashed-ns { border-style: dashed; }
+ .b--solid-ns { border-style: solid; }
+ .b--none-ns { border-style: none; }
  .bw0-ns { border-width: 0; }
  .bw1-ns { border-width: .125rem; }
  .bw2-ns { border-width: .25rem; }
@@ -2051,6 +2173,21 @@ body { margin: 0; }
  .bb-m { border-bottom-style: solid; border-bottom-width: 1px; }
  .bl-m { border-left-style: solid; border-left-width: 1px; }
  .bn-m { border-style: none; border-width: 0; }
+ .br0-m { border-radius: 0; }
+ .br1-m { border-radius: .125rem; }
+ .br2-m { border-radius: .25rem; }
+ .br3-m { border-radius: .5rem; }
+ .br4-m { border-radius: 1rem; }
+ .br-100-m { border-radius: 100%; }
+ .br-pill-m { border-radius: 9999px; }
+ .br--bottom-m { border-top-left-radius: 0; border-top-right-radius: 0; }
+ .br--top-m { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+ .br--right-m { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+ .br--left-m { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+ .b--dotted-m { border-style: dotted; }
+ .b--dashed-m { border-style: dashed; }
+ .b--solid-m { border-style: solid; }
+ .b--none-m { border-style: none; }
  .bw0-m { border-width: 0; }
  .bw1-m { border-width: .125rem; }
  .bw2-m { border-width: .25rem; }
@@ -2449,6 +2586,21 @@ body { margin: 0; }
  .bb-l { border-bottom-style: solid; border-bottom-width: 1px; }
  .bl-l { border-left-style: solid; border-left-width: 1px; }
  .bn-l { border-style: none; border-width: 0; }
+ .br0-l { border-radius: 0; }
+ .br1-l { border-radius: .125rem; }
+ .br2-l { border-radius: .25rem; }
+ .br3-l { border-radius: .5rem; }
+ .br4-l { border-radius: 1rem; }
+ .br-100-l { border-radius: 100%; }
+ .br-pill-l { border-radius: 9999px; }
+ .br--bottom-l { border-top-left-radius: 0; border-top-right-radius: 0; }
+ .br--top-l { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+ .br--right-l { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+ .br--left-l { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+ .b--dotted-l { border-style: dotted; }
+ .b--dashed-l { border-style: dashed; }
+ .b--solid-l { border-style: solid; }
+ .b--none-l { border-style: none; }
  .bw0-l { border-width: 0; }
  .bw1-l { border-width: .125rem; }
  .bw2-l { border-width: .25rem; }
